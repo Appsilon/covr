@@ -1,5 +1,8 @@
 context("box")
 
+loaded_mods <- loadNamespace("box")$loaded_mods
+rm(list = ls(loaded_mods), envir = loaded_mods)
+
 test_that("box module coverage is reported", {
   withr::with_dir("Testbox", {
     cov <- as.data.frame(file_coverage(
