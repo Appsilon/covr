@@ -5,5 +5,5 @@ rm(list = ls(loaded_mods), envir = loaded_mods)
 
 box::use(
   app/modules/module,
-  app/modules/moduleR6
+  # app/modules/moduleR6
 )
