@@ -3,8 +3,9 @@ context("box")
 loaded_mods <- loadNamespace("box")$loaded_mods
 rm(list = ls(loaded_mods), envir = loaded_mods)
 
-test_that("box module coverage is reported", {
-  withr::with_dir("Testbox", {
+test_that("R6 box module coverage is reported", {
+  skip_if(is_r_devel())
+  withr::with_dir("Testbox_R6", {
     cov <- as.data.frame(file_coverage(
         source_files = "app/app.R",
         test_files = list.files("tests/testthat", full.names = TRUE)))
