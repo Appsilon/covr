@@ -1,6 +1,7 @@
 # covr (development version)
 
 * Added support for `klmr/box` modules. This works best with `file_coverage()`. (@radbasa, #491)
+
 # covr 3.6.2
 
 # covr 3.6.1
